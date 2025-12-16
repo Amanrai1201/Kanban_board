@@ -14,10 +14,7 @@ if(localStorage.getItem("tasks")){
         data[col].forEach(task =>{
            addTask(task.title, task.desc, column);
         })
-        const tasks = column.querySelectorAll(".task");
-         const count = column.querySelector(".right");
-
-         count.innerText = tasks.length;
+        updateTaskCount();
     }
 }
 
@@ -27,8 +24,8 @@ function addTask(title, desc, column){
     div.setAttribute("draggable", "true")
 
     div.innerHTML=`
-                    <h2>${title.value}</h2>
-                    <p>${desc.value}</p>
+                    <h2>${title}</h2>
+                    <p>${desc}</p>
                     <button>Delete</button>
     `
     column.appendChild(div)
@@ -135,3 +132,4 @@ toggleModalButton.addEventListener("click",()=>{
 })
 
 // functionalies jo banayi hai
+
