@@ -181,4 +181,72 @@ section .task-column .task button {
     width: 100%;
     background-color: rgba(61, 61, 61, 0.404);
     backdrop-filter: blur(5px);
+
+}
+@media (max-width: 768px) {
+    nav {
+        padding: var(--padding-m);
+    }
+
+    nav .left {
+        font-size: 1.2rem;
+    }
+
+    nav button {
+        font-size: 0.9rem;
+        padding: var(--padding-s);
+    }
+
+    section {
+        flex-direction: column;
+        gap: var(--padding-m);
+        padding: var(--padding-m);
+    }
+
+    section .task-column {
+        width: 100%;
+    }
+
+    .modal .center {
+        padding: var(--padding-l);
+        width: 90%;
+        max-width: 400px;
+    }
+
+    .modal .center input,
+    .modal .center textarea {
+        font-size: 1rem;
+    }
+
+    .modal .center button {
+        height: 6vh;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        padding: var(--padding-s) var(--padding-m);
+    }
+
+    nav .left {
+        font-size: 1rem;
+    }
+
+    nav button {
+        font-size: 0.8rem;
+        padding: var(--padding-s);
+    }
+
+    section {
+        padding: var(--padding-s);
+    }
+
+    .modal .center {
+        padding: var(--padding-m);
+    }
+
+    .modal .center input,
+    .modal .center textarea {
+        padding: var(--padding-s);
+    }
 }
